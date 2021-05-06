@@ -1,16 +1,27 @@
-# linkinbio
+# Linkinbio
 
-A new Flutter project.
+[![Flutter](https://img.shields.io/static/v1?label=Flutter&message=2.0&color=blue)](https://flutter.dev/)
+[![Null Safety](https://img.shields.io/static/v1?label=Null+Safety&message=YES&color=success)](https://flutter.dev/docs/null-safety)
+[![Flutter Support](https://img.shields.io/static/v1?label=Support&message=Web%20|%20Android%20|%20iOS&color=blue)]()
 
-## Getting Started
+<!-- <img src="assets/images/repository-banner.png" align="center"/> -->
 
-This project is a starting point for a Flutter application.
+## Features
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+## Dependencies
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- [flutter_screenutil](https://pub.dev/packages/flutter_screenutil)
+- [font_awesome_flutter](https://pub.dev/packages/font_awesome_flutter)
+- [google_fonts](https://pub.dev/packages/google_fonts)
+
+### Dev Dependencies
+- [lint](https://pub.dev/packages/lint)
+- [test](https://pub.dev/packages/test)
+
+# License
+
+```xml
+Copyright 2021 Anibal Ventura
+```
+
