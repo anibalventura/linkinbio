@@ -66,5 +66,13 @@ class _AppLocalizationsDelegate
 
 // Texts to translate.
 class AppText {
+  static String appLanguage = 'appLanguage';
   static String textAppName = 'appName';
+
+  /*
+  * Home Screen.
+  */
+
+  static String title = 'title';
+  static String portfolio = 'portfolio';
 }

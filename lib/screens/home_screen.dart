@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:google_fonts/google_fonts.dart';
+import 'package:linkinbio/utils/localizations.dart';
 import 'package:linkinbio/utils/utils.dart';
-import 'package:linkinbio/widgets/info_card.dart';
+import 'package:linkinbio/widgets/footer.dart';
+import 'package:linkinbio/widgets/link_button.dart';
 
 class HomeScreen extends StatelessWidget {
   static String route = '/';
@@ -30,23 +31,12 @@ class HomeScreen extends StatelessWidget {
                     SizedBox(height: 0.01.sh),
                     Text(
                       "Anibal Ventura",
-                      style: TextStyle(
-                        color: theme(context).textTheme.headline1!.color,
-                        fontSize: screenPortrait() ? 24.sp : 34.sp,
-                        fontWeight: FontWeight.bold,
-                        fontFamily: GoogleFonts.pacifico().fontFamily,
-                      ),
+                      style: theme(context).textTheme.headline1,
                     ),
                     SizedBox(height: 0.01.sh),
                     Text(
-                      "Software Developer",
-                      style: TextStyle(
-                        color: theme(context).textTheme.headline1!.color,
-                        fontSize: screenPortrait() ? 18.sp : 24.sp,
-                        letterSpacing: 0.5.sp,
-                        fontWeight: FontWeight.bold,
-                        fontFamily: GoogleFonts.sourceSansPro().fontFamily,
-                      ),
+                      translate(context, AppText.title),
+                      style: theme(context).textTheme.headline2,
                     ),
                     SizedBox(
                       height: screenPortrait() ? 0.03.sh : 0.05.sh,
@@ -56,49 +46,35 @@ class HomeScreen extends StatelessWidget {
                         thickness: 1,
                       ),
                     ),
-                    InfoCard(
+                    LinkButton(
                       icon: FontAwesomeIcons.googlePlay,
                       title: "Android Apps",
                       url:
                           'https://play.google.com/store/search?q=pub%3A%20Anibal%20Ventura&c=apps&hl=en',
                     ),
-                    InfoCard(
+                    LinkButton(
                       icon: FontAwesomeIcons.appStoreIos,
                       title: "iOS Apps",
                       url:
                           'https://apps.apple.com/developer/anibal-ventura/id1550794427',
                     ),
-                    InfoCard(
+                    LinkButton(
                       icon: FontAwesomeIcons.github,
                       title: "GitHub",
                       url: 'https://github.com/anibalventura',
                     ),
-                    InfoCard(
+                    LinkButton(
                       icon: FontAwesomeIcons.linkedinIn,
                       title: "LinkedIn",
                       url: 'https://www.linkedin.com/in/anibalventura/',
                     ),
-                    InfoCard(
+                    LinkButton(
                       icon: FontAwesomeIcons.suitcase,
-                      title: "Portfolio",
+                      title: translate(context, AppText.portfolio),
                       url: 'https://anibalventura.com/',
                     ),
                     SizedBox(height: 0.1.sh),
-                    Expanded(
-                      child: Align(
-                        alignment: Alignment.bottomCenter,
-                        child: Container(
-                          width: double.infinity,
-                          color: theme(context).cardColor,
-                          padding: EdgeInsets.symmetric(
-                              vertical: screenPortrait() ? 0.01.sh : 0.02.sh),
-                          child: Text(
-                            '© 2021 Anibal Ventura',
-                            textAlign: TextAlign.center,
-                          ),
-                        ),
-                      ),
-                    ),
+                    Footer(),
                   ],
                 ),
               ),

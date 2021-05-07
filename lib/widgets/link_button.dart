@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:linkinbio/utils/utils.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-class InfoCard extends StatelessWidget {
-  InfoCard({
+class LinkButton extends StatelessWidget {
+  LinkButton({
     @required this.icon,
     @required this.title,
     this.url,
@@ -19,13 +18,13 @@ class InfoCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final borderRadius = BorderRadius.all(Radius.circular(50.r));
+    final borderRadius = BorderRadius.all(Radius.circular(15.r));
 
     return Container(
       margin:
           EdgeInsets.symmetric(vertical: screenPortrait() ? 0.01.sh : 0.005.sw),
       child: Material(
-        color: backgroundColor ?? theme(context).cardColor,
+        color: backgroundColor ?? theme(context).buttonColor,
         borderRadius: borderRadius,
         child: InkWell(
           onTap: () async {
@@ -41,7 +40,7 @@ class InfoCard extends StatelessWidget {
             ),
             child: ConstrainedBox(
               constraints: BoxConstraints(
-                minWidth: screenPortrait() ? 0.35.sw : 0.15.sw,
+                minWidth: screenPortrait() ? 0.4.sw : 0.15.sw,
                 maxWidth: screenPortrait() ? 0.5.sw : 0.3.sw,
               ),
               child: Row(
@@ -53,11 +52,7 @@ class InfoCard extends StatelessWidget {
                     fit: BoxFit.fitWidth,
                     child: Text(
                       title!,
-                      style: TextStyle(
-                        fontFamily: GoogleFonts.sourceSansPro().fontFamily,
-                        color: theme(context).textTheme.headline1!.color,
-                        fontSize: 18.sp,
-                      ),
+                      style: theme(context).textTheme.bodyText1,
                     ),
                   ),
                 ],

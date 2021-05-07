@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return ScreenUtilInit(
       builder: () => MaterialApp(
-        title: 'Linkinbio',
+        title: 'Linkinbio - Anibal Ventura',
         localizationsDelegates: [
           AppLocalizations.delegate,
           GlobalWidgetsLocalizations.delegate,
