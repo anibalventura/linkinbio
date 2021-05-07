@@ -8,14 +8,14 @@ class InfoCard extends StatelessWidget {
   InfoCard({
     @required this.icon,
     @required this.title,
-    this.backgroundColor,
     this.url,
+    this.backgroundColor,
   });
 
   final IconData? icon;
   final String? title;
-  final Color? backgroundColor;
   final String? url;
+  final Color? backgroundColor;
 
   @override
   Widget build(BuildContext context) {
@@ -40,8 +40,8 @@ class InfoCard extends StatelessWidget {
             ),
             child: ConstrainedBox(
               constraints: BoxConstraints(
-                minWidth: 0.5.sw,
-                maxWidth: 0.6.sw,
+                minWidth: 0.4.sw,
+                maxWidth: 0.5.sw,
               ),
               child: Row(
                 mainAxisSize: MainAxisSize.min,
@@ -57,6 +57,7 @@ class InfoCard extends StatelessWidget {
                       title!,
                       style: TextStyle(
                         fontFamily: GoogleFonts.sourceSansPro().fontFamily,
+                        color: theme(context).textTheme.headline1!.color,
                         fontSize: 18.sp,
                       ),
                     ),
