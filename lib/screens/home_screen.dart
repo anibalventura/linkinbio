@@ -24,7 +24,7 @@ class HomeScreen extends StatelessWidget {
                   children: [
                     SizedBox(height: 0.1.sh),
                     CircleAvatar(
-                      radius: 50.r,
+                      radius: screenPortrait() ? 50.r : 80.r,
                       backgroundImage: AssetImage("assets/images/profile.png"),
                     ),
                     SizedBox(height: 0.01.sh),
@@ -32,7 +32,7 @@ class HomeScreen extends StatelessWidget {
                       "Anibal Ventura",
                       style: TextStyle(
                         color: theme(context).textTheme.headline1!.color,
-                        fontSize: 24.sp,
+                        fontSize: screenPortrait() ? 24.sp : 34.sp,
                         fontWeight: FontWeight.bold,
                         fontFamily: GoogleFonts.pacifico().fontFamily,
                       ),
@@ -42,15 +42,15 @@ class HomeScreen extends StatelessWidget {
                       "Software Developer",
                       style: TextStyle(
                         color: theme(context).textTheme.headline1!.color,
-                        fontSize: 18.sp,
+                        fontSize: screenPortrait() ? 18.sp : 24.sp,
                         letterSpacing: 0.5.sp,
                         fontWeight: FontWeight.bold,
                         fontFamily: GoogleFonts.sourceSansPro().fontFamily,
                       ),
                     ),
                     SizedBox(
-                      height: 0.03.sh,
-                      width: 0.15.sw,
+                      height: screenPortrait() ? 0.03.sh : 0.05.sh,
+                      width: screenPortrait() ? 0.15.sw : 0.1.sw,
                       child: Divider(
                         color: theme(context).textTheme.headline1!.color,
                         thickness: 1,
@@ -63,7 +63,7 @@ class HomeScreen extends StatelessWidget {
                           'https://play.google.com/store/search?q=pub%3A%20Anibal%20Ventura&c=apps&hl=en',
                     ),
                     InfoCard(
-                      icon: FontAwesomeIcons.appStore,
+                      icon: FontAwesomeIcons.appStoreIos,
                       title: "iOS Apps",
                       url:
                           'https://apps.apple.com/developer/anibal-ventura/id1550794427',
@@ -90,7 +90,8 @@ class HomeScreen extends StatelessWidget {
                         child: Container(
                           width: double.infinity,
                           color: theme(context).cardColor,
-                          padding: EdgeInsets.symmetric(vertical: 0.01.sh),
+                          padding: EdgeInsets.symmetric(
+                              vertical: screenPortrait() ? 0.01.sh : 0.02.sh),
                           child: Text(
                             '© 2021 Anibal Ventura',
                             textAlign: TextAlign.center,

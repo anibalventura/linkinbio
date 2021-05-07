@@ -22,7 +22,8 @@ class InfoCard extends StatelessWidget {
     final borderRadius = BorderRadius.all(Radius.circular(50.r));
 
     return Container(
-      margin: EdgeInsets.symmetric(vertical: 0.01.sh),
+      margin:
+          EdgeInsets.symmetric(vertical: screenPortrait() ? 0.01.sh : 0.005.sw),
       child: Material(
         color: backgroundColor ?? theme(context).cardColor,
         borderRadius: borderRadius,
@@ -35,22 +36,19 @@ class InfoCard extends StatelessWidget {
           borderRadius: borderRadius,
           child: Padding(
             padding: EdgeInsets.symmetric(
-              horizontal: 0.05.sw,
-              vertical: 0.015.sh,
+              horizontal: screenPortrait() ? 0.05.sw : 0.03.sw,
+              vertical: screenPortrait() ? 0.015.sh : 0.02.sh,
             ),
             child: ConstrainedBox(
               constraints: BoxConstraints(
-                minWidth: 0.4.sw,
-                maxWidth: 0.5.sw,
+                minWidth: screenPortrait() ? 0.35.sw : 0.15.sw,
+                maxWidth: screenPortrait() ? 0.5.sw : 0.3.sw,
               ),
               child: Row(
                 mainAxisSize: MainAxisSize.min,
                 children: [
-                  Icon(
-                    icon,
-                    color: Colors.blue,
-                  ),
-                  SizedBox(width: 0.03.sw),
+                  Icon(icon),
+                  SizedBox(width: screenPortrait() ? 0.03.sw : 0.01.sw),
                   FittedBox(
                     fit: BoxFit.fitWidth,
                     child: Text(

@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:linkinbio/utils/utils.dart';
 
 class Themes {
   static final String? _fontFamily = GoogleFonts.roboto().fontFamily;
@@ -41,7 +42,7 @@ class Themes {
   // Icon.
   static final IconThemeData _iconThemeLight = IconThemeData(
     color: _primaryColorLight,
-    size: 0.05.sw,
+    size: screenPortrait() ? 0.05.sw : 0.03.sw,
   );
 
   // Final Theme.
