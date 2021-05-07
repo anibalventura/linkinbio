@@ -42,7 +42,6 @@ class MyApp extends StatelessWidget {
         routes: {
           HomeScreen.route: (context) => HomeScreen(),
         },
-        initialRoute: HomeScreen.route,
       ),
     );
   }
