@@ -23,7 +23,7 @@ class MyApp extends StatelessWidget {
       ],
       child: ScreenUtilInit(
         builder: () => MaterialApp(
-          title: 'Linkinbio - Anibal Ventura',
+          title: '${AppText.appName} - ${AppText.user}',
           localizationsDelegates: [
             AppLocalizations.delegate,
             GlobalWidgetsLocalizations.delegate,

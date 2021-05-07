@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:linkinbio/provider/screen_provider.dart';
+import 'package:linkinbio/utils/localizations.dart';
 import 'package:linkinbio/utils/utils.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:provider/provider.dart';
@@ -20,7 +21,7 @@ class Footer extends StatelessWidget {
               vertical: screen.portrait ? 0.01.sh : 0.02.sh,
             ),
             child: Text(
-              '© 2021 Anibal Ventura',
+              '© ${DateTime.now().year} ${AppText.user}',
               textAlign: TextAlign.center,
               style: TextStyle(
                 color: theme(context).textTheme.headline1!.color,
