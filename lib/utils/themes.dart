@@ -2,7 +2,6 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:linkinbio/utils/utils.dart';
 
 class Themes {
   static final String? _fontFamily = GoogleFonts.roboto().fontFamily;
@@ -19,28 +18,25 @@ class Themes {
 
   // Text Styles.
   static final TextStyle _lightHeadline1 = TextStyle(
-    fontSize: screenPortrait() ? 24.sp : 34.sp,
     fontWeight: FontWeight.bold,
     fontFamily: GoogleFonts.itim().fontFamily,
     color: _lightPrimaryTextColor,
   );
 
   static final TextStyle _lightHeadline2 = _lightHeadline1.copyWith(
-    fontSize: screenPortrait() ? 18.sp : 24.sp,
     letterSpacing: 0.5.sp,
-    fontWeight: FontWeight.bold,
+    fontWeight: FontWeight.w500,
     fontFamily: GoogleFonts.sourceSansPro().fontFamily,
   );
 
   static final TextStyle _lightBodyText1 = _lightHeadline1.copyWith(
-    fontSize: screenPortrait() ? 18.sp : 24.sp,
+    fontWeight: FontWeight.w300,
     fontFamily: GoogleFonts.lato().fontFamily,
   );
 
   // Icon.
   static final IconThemeData _iconThemeLight = IconThemeData(
     color: _primaryColorLight,
-    size: screenPortrait() ? 0.05.sw : 0.03.sw,
   );
 
   // Final Theme.

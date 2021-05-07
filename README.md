@@ -14,11 +14,11 @@
 - [flutter_screenutil](https://pub.dev/packages/flutter_screenutil)
 - [font_awesome_flutter](https://pub.dev/packages/font_awesome_flutter)
 - [google_fonts](https://pub.dev/packages/google_fonts)
+- [provider](https://pub.dev/packages/provider)
 - [url_launcher](https://pub.dev/packages/url_launcher)
 
 ### Dev Dependencies
 - [lint](https://pub.dev/packages/lint)
-- [test](https://pub.dev/packages/test)
 
 # License
 
