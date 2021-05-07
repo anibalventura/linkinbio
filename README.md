@@ -19,6 +19,7 @@
 
 ### Dev Dependencies
 - [lint](https://pub.dev/packages/lint)
+- [flutter_native_splash](https://pub.dev/packages/flutter_native_splash)
 
 # License
 

@@ -1,10 +1,10 @@
 name: linkinbio
 description: A new Flutter project.
-publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+publish_to: "none" # Remove this line if you wish to publish to pub.dev
 version: 1.0.0+1
 
 environment:
-  sdk: '>=2.12.0 <3.0.0'
+  sdk: ">=2.12.0 <3.0.0"
 
 dependencies:
   flutter:
@@ -21,10 +21,22 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
   lint: ^1.5.3
+  flutter_native_splash: ^1.1.7+1
 
 flutter:
   uses-material-design: true
 
   assets:
     - assets/lang/
-    - assets/images/
+    - assets/images/launcher/
+    - assets/images/home_screen/
+
+# To change splash run:
+# flutter clean && flutter pub get
+# flutter pub run flutter_native_splash:create
+flutter_native_splash:
+  color: "#FFFFFF"
+  image: assets/images/launcher/splash.png
+  color_dark: "#22252D"
+  image_dark: assets/images/launcher/splash.png
+  android_disable_fullscreen: true

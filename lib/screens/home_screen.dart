@@ -33,7 +33,7 @@ class HomeScreen extends StatelessWidget {
                         CircleAvatar(
                           radius: screen.portrait ? 50.r : 90.r,
                           backgroundImage:
-                              AssetImage("assets/images/profile.png"),
+                              AssetImage("assets/images/home_screen/profile.png"),
                         ),
                         SizedBox(height: 0.01.sh),
                         Text(
