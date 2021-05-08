@@ -7,7 +7,8 @@
 <img src="assets/images/repository-banner.png" align="center"/>
 
 Simple web page for share clickable links to individual pages or products in your social media accounts.
-See live preview (here)[https://anibalventura.com/linkinbio/#/].
+
+See live preview [here](https://anibalventura.com/linkinbio/).
 
 ## Features
 
