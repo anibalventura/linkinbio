@@ -4,7 +4,7 @@
 [![Null Safety](https://img.shields.io/static/v1?label=Null+Safety&message=YES&color=success)](https://flutter.dev/docs/null-safety)
 [![Flutter Support](https://img.shields.io/static/v1?label=Support&message=Web%20|%20Android%20|%20iOS&color=blue)]()
 
-<img src="assets/images/repository-banner.png" align="center"/>
+<img src="app/repository-banner.png" align="center"/>
 
 Simple web page for share clickable links to individual pages or products in your social media accounts.
 
