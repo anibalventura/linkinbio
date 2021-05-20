@@ -1,5 +1,5 @@
 name: linkinbio
-description: A new Flutter project.
+description: Simple web page for share clickable links to individual pages or products in your social media accounts.
 publish_to: "none" # Remove this line if you wish to publish to pub.dev
 version: 1.0.0+1
 

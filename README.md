@@ -1,6 +1,6 @@
 # Linkinbio
 
-[![Flutter](https://img.shields.io/static/v1?label=Flutter&message=2.0&color=blue)](https://flutter.dev/)
+[![Flutter](https://img.shields.io/static/v1?label=Flutter&message=2.2&color=blue)](https://flutter.dev/)
 [![Null Safety](https://img.shields.io/static/v1?label=Null+Safety&message=YES&color=success)](https://flutter.dev/docs/null-safety)
 [![Flutter Support](https://img.shields.io/static/v1?label=Support&message=Web%20|%20Android%20|%20iOS&color=blue)]()
 
