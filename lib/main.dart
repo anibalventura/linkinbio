@@ -9,6 +9,7 @@ import 'package:linkinbio/utils/texts.dart';
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
 
+  // Init app with ScreenUtils for dynamic sizes.
   runApp(
     ScreenUtilInit(builder: () => LinkinbioApp()),
   );
@@ -24,15 +25,15 @@ class LinkinbioApp extends StatelessWidget {
       routes: {
         HomeScreen.route: (context) => HomeScreen(),
       },
-      localizationsDelegates: [
+      localizationsDelegates: const [
         AppLocalizations.delegate,
         GlobalWidgetsLocalizations.delegate,
         GlobalMaterialLocalizations.delegate,
         GlobalCupertinoLocalizations.delegate,
       ],
-      supportedLocales: [
-        const Locale('en', ''),
-        const Locale('es', ''),
+      supportedLocales: const [
+        Locale('en', ''),
+        Locale('es', ''),
       ],
       localeResolutionCallback:
           (Locale? locale, Iterable<Locale> supportedLocales) {

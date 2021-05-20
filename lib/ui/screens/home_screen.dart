@@ -27,50 +27,50 @@ class HomeScreen extends StatelessWidget {
                     children: [
                       SizedBox(height: 0.1.sh),
                       CircleAvatar(
-                        radius: isPortrait() ? 50.r : 90.r,
-                        backgroundImage:
-                            const AssetImage("assets/images/home_screen/profile.png"),
+                        radius: isLandscape() ? 90.r : 50.r,
+                        backgroundImage: const AssetImage(
+                            "assets/images/home_screen/profile.png"),
                       ),
                       SizedBox(height: 0.01.sh),
                       AdaptiveText(
                         text: "Anibal Ventura",
                         style: theme(context).textTheme.headline1!.copyWith(
-                              fontSize: isPortrait() ? 24.sp : 36.sp,
+                              fontSize: isLandscape() ? 36.sp : 24.sp,
                             ),
                       ),
                       SizedBox(height: 0.002.sh),
                       AdaptiveText(
                         text: translate(context, Texts.title),
                         style: theme(context).textTheme.headline2!.copyWith(
-                              fontSize: isPortrait() ? 18.sp : 26.sp,
+                              fontSize: isLandscape() ? 26.sp : 18.sp,
                             ),
                       ),
                       SizedBox(
-                        height: isPortrait() ? 0.05.sh : 0.08.sh,
-                        width: isPortrait() ? 0.15.sw : 0.1.sw,
+                        height: isLandscape() ? 0.08.sh : 0.05.sh,
+                        width: isLandscape() ? 0.1.sw : 0.15.sw,
                         child: Divider(
                           color: theme(context).textTheme.headline1!.color,
                           thickness: 1,
                         ),
                       ),
-                      const LinkButton(
+                      LinkButton(
                         icon: FontAwesomeIcons.googlePlay,
                         title: "Android Apps",
                         url:
                             'https://play.google.com/store/search?q=pub%3A%20Anibal%20Ventura&c=apps&hl=en',
                       ),
-                      const LinkButton(
+                      LinkButton(
                         icon: FontAwesomeIcons.appStoreIos,
                         title: "iOS Apps",
                         url:
                             'https://apps.apple.com/developer/anibal-ventura/id1550794427',
                       ),
-                      const LinkButton(
+                      LinkButton(
                         icon: FontAwesomeIcons.github,
                         title: "GitHub",
                         url: 'https://github.com/anibalventura',
                       ),
-                      const LinkButton(
+                      LinkButton(
                         icon: FontAwesomeIcons.linkedinIn,
                         title: "LinkedIn",
                         url: 'https://www.linkedin.com/in/anibalventura/',

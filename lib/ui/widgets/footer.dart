@@ -14,14 +14,14 @@ class Footer extends StatelessWidget {
           width: double.infinity,
           color: theme(context).buttonColor,
           padding: EdgeInsets.symmetric(
-            vertical: isPortrait() ? 0.01.sh : 0.02.sh,
+            vertical: isLandscape() ? 0.02.sh : 0.01.sh,
           ),
           child: AdaptiveText(
             text: '© ${DateTime.now().year} ${Texts.user}',
             textAlign: TextAlign.center,
             style: TextStyle(
               color: theme(context).textTheme.headline1!.color,
-              fontSize: isPortrait() ? 12.sp : 18.sp,
+              fontSize: isLandscape() ? 18.sp : 12.sp,
             ),
           ),
         ),

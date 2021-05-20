@@ -7,4 +7,4 @@ ThemeData theme(BuildContext context) => Theme.of(context);
 String translate(BuildContext context, String text) =>
     AppLocalizations.of(context)!.trans(text)!;
 
-bool isPortrait() => ScreenUtil().orientation == Orientation.portrait;
+bool isLandscape() => ScreenUtil().orientation == Orientation.landscape;
