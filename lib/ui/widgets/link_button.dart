@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:linkinbio/ui/widgets/adaptive_text.dart';
 import 'package:linkinbio/utils/utils.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class LinkButton extends StatelessWidget {
-  LinkButton({
+  const LinkButton({
     @required this.icon,
     @required this.title,
     this.url,
@@ -21,8 +22,9 @@ class LinkButton extends StatelessWidget {
     final borderRadius = BorderRadius.all(Radius.circular(15.r));
 
     return Container(
-      margin:
-          EdgeInsets.symmetric(vertical: screenPortrait() ? 0.01.sh : 0.005.sw,),
+      margin: EdgeInsets.symmetric(
+        vertical: isPortrait() ? 0.01.sh : 0.005.sw,
+      ),
       child: Material(
         color: backgroundColor ?? theme(context).buttonColor,
         borderRadius: borderRadius,
@@ -35,25 +37,25 @@ class LinkButton extends StatelessWidget {
           borderRadius: borderRadius,
           child: Padding(
             padding: EdgeInsets.symmetric(
-              horizontal: screenPortrait() ? 0.05.sw : 0.03.sw,
-              vertical: screenPortrait() ? 0.015.sh : 0.02.sh,
+              horizontal: isPortrait() ? 0.05.sw : 0.03.sw,
+              vertical: isPortrait() ? 0.015.sh : 0.02.sh,
             ),
             child: ConstrainedBox(
               constraints: BoxConstraints(
-                minWidth: screenPortrait() ? 0.4.sw : 0.15.sw,
-                maxWidth: screenPortrait() ? 0.5.sw : 0.3.sw,
+                minWidth: isPortrait() ? 0.4.sw : 0.25.sw,
+                maxWidth: isPortrait() ? 0.5.sw : 0.3.sw,
               ),
               child: Row(
                 mainAxisSize: MainAxisSize.min,
                 children: [
-                  Icon(icon, size: screenPortrait() ? 0.05.sw : 0.03.sw),
-                  SizedBox(width: screenPortrait() ? 0.03.sw : 0.01.sw),
+                  Icon(icon, size: isPortrait() ? 0.05.sw : 0.03.sw),
+                  SizedBox(width: isPortrait() ? 0.03.sw : 0.01.sw),
                   FittedBox(
                     fit: BoxFit.fitWidth,
-                    child: Text(
-                      title!,
+                    child: AdaptiveText(
+                      text: title,
                       style: theme(context).textTheme.bodyText1!.copyWith(
-                            fontSize: screenPortrait() ? 18.sp : 24.sp,
+                            fontSize: isPortrait() ? 18.sp : 24.sp,
                           ),
                     ),
                   ),

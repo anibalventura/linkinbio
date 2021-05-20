@@ -4,17 +4,25 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class Themes {
-  static final String? _fontFamily = GoogleFonts.roboto().fontFamily;
-
   /*
-  * Light Theme.
+  * Colors.
   */
 
-  // Colors.
+  // Light.
   static final Color _primaryColorLight = Colors.lightBlue;
   static final Color _lightPrimaryTextColor = Colors.black;
   static const Color _lightBackgroundColor = Colors.white;
   static final Color _lightButtonColor = Colors.grey.shade100;
+
+  // Dark.
+  static final Color _primaryColorDark = Colors.lightBlue.shade700;
+  static const Color _darkPrimaryTextColor = Colors.white;
+  static const Color _darkBackgroundColor = Color(0xFF22252D);
+  static const Color _darkButtonColor = Color(0xFF292D36);
+
+  /*
+  * Light Theme.
+  */
 
   // Text Styles.
   static final TextStyle _lightHeadline1 = TextStyle(
@@ -50,18 +58,12 @@ class Themes {
       headline2: _lightHeadline2,
       bodyText1: _lightBodyText1,
     ),
-    fontFamily: _fontFamily,
+    fontFamily: GoogleFonts.roboto().fontFamily,
   );
 
   /*
   * Dark Theme.
   */
-
-  // Colors.
-  static final Color _primaryColorDark = Colors.lightBlue.shade700;
-  static const Color _darkPrimaryTextColor = Colors.white;
-  static final Color _darkBackgroundColor = Color(0xFF22252D);
-  static final Color _darkButtonColor = Color(0xFF292D36);
 
   // Text Styles.
   static final TextStyle _darkHeadline1 = _lightHeadline1.copyWith(

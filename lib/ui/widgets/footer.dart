@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:linkinbio/utils/localizations.dart';
+import 'package:linkinbio/ui/widgets/adaptive_text.dart';
+import 'package:linkinbio/utils/texts.dart';
 import 'package:linkinbio/utils/utils.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -13,14 +14,14 @@ class Footer extends StatelessWidget {
           width: double.infinity,
           color: theme(context).buttonColor,
           padding: EdgeInsets.symmetric(
-            vertical: screenPortrait() ? 0.01.sh : 0.02.sh,
+            vertical: isPortrait() ? 0.01.sh : 0.02.sh,
           ),
-          child: Text(
-            '© ${DateTime.now().year} ${AppText.user}',
+          child: AdaptiveText(
+            text: '© ${DateTime.now().year} ${Texts.user}',
             textAlign: TextAlign.center,
             style: TextStyle(
               color: theme(context).textTheme.headline1!.color,
-              fontSize: screenPortrait() ? 12.sp : 18.sp,
+              fontSize: isPortrait() ? 12.sp : 18.sp,
             ),
           ),
         ),

@@ -63,15 +63,3 @@ class _AppLocalizationsDelegate
   @override
   bool shouldReload(_AppLocalizationsDelegate old) => false;
 }
-
-// Texts to translate.
-class AppText {
-  static String appName = 'Linkinbio';
-  static String user = 'Anibal Ventura';
-
-  /*
-  * Home Screen.
-  */
-  static String title = 'title';
-  static String portfolio = 'portfolio';
-}
