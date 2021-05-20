@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:linkinbio/ui/themes.dart';
 import 'package:linkinbio/ui/widgets/adaptive_text.dart';
 import 'package:linkinbio/utils/utils.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -48,14 +49,14 @@ class LinkButton extends StatelessWidget {
               child: Row(
                 mainAxisSize: MainAxisSize.min,
                 children: [
-                  Icon(icon, size: isLandscape() ? 0.03.sw : 0.05.sw),
+                  Icon(icon, size: Themes().iconSize),
                   SizedBox(width: isLandscape() ? 0.01.sw : 0.03.sw),
                   FittedBox(
                     fit: BoxFit.fitWidth,
                     child: AdaptiveText(
                       text: title,
                       style: theme(context).textTheme.bodyText1!.copyWith(
-                            fontSize: isLandscape() ? 24.sp : 18.sp,
+                            fontSize: Themes().bodyTextSize1,
                           ),
                     ),
                   ),

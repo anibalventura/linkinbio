@@ -2,8 +2,28 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:linkinbio/utils/utils.dart';
 
 class Themes {
+  /*
+  * Sizes.
+  */
+
+  final double _headlineTextSize1 = isLandscape() ? 36.sp : 24.sp;
+  double get headlineTextSize1 => _headlineTextSize1;
+
+  final double _headlineTextSize2 = isLandscape() ? 26.sp : 18.sp;
+  double get headlineTextSize2 => _headlineTextSize2;
+
+  final double _bodyTextSize1 = isLandscape() ? 24.sp : 18.sp;
+  double get bodyTextSize1 => _bodyTextSize1;
+
+  final double _bodyTextSize2 = isLandscape() ? 14.sp : 12.sp;
+  double get bodyTextSize2 => _bodyTextSize2;
+
+  final double _iconSize = isLandscape() ? 0.03.sw : 0.05.sw;
+  double get iconSize => _iconSize;
+
   /*
   * Colors.
   */
@@ -21,78 +41,64 @@ class Themes {
   static const Color _darkButtonColor = Color(0xFF292D36);
 
   /*
-  * Light Theme.
+  * Styles.
   */
 
-  // Text Styles.
-  static final TextStyle _lightHeadline1 = TextStyle(
+  static final TextStyle _headlineText1 = TextStyle(
+    color: _lightPrimaryTextColor,
     fontWeight: FontWeight.bold,
     fontFamily: GoogleFonts.itim().fontFamily,
-    color: _lightPrimaryTextColor,
   );
 
-  static final TextStyle _lightHeadline2 = _lightHeadline1.copyWith(
+  static final TextStyle _headlineText2 = _headlineText1.copyWith(
     letterSpacing: 0.5.sp,
     fontWeight: FontWeight.w500,
     fontFamily: GoogleFonts.sourceSansPro().fontFamily,
   );
 
-  static final TextStyle _lightBodyText1 = _lightHeadline1.copyWith(
+  static final TextStyle _bodyText1 = _headlineText1.copyWith(
     fontWeight: FontWeight.w300,
     fontFamily: GoogleFonts.lato().fontFamily,
   );
 
-  // Icon.
-  static final IconThemeData _iconThemeLight = IconThemeData(
-    color: _primaryColorLight,
-  );
+  /*
+  * Themes.
+  */
 
-  // Final Theme.
+  // Light.
   static final ThemeData lightTheme = ThemeData(
     primaryColor: _primaryColorLight,
     scaffoldBackgroundColor: _lightBackgroundColor,
     buttonColor: _lightButtonColor,
-    iconTheme: _iconThemeLight,
+    iconTheme: IconThemeData(
+      color: _primaryColorLight,
+    ),
     textTheme: TextTheme(
-      headline1: _lightHeadline1,
-      headline2: _lightHeadline2,
-      bodyText1: _lightBodyText1,
+      headline1: _headlineText1,
+      headline2: _headlineText2,
+      bodyText1: _bodyText1,
     ),
     fontFamily: GoogleFonts.roboto().fontFamily,
   );
 
-  /*
-  * Dark Theme.
-  */
-
-  // Text Styles.
-  static final TextStyle _darkHeadline1 = _lightHeadline1.copyWith(
-    color: _darkPrimaryTextColor,
-  );
-
-  static final TextStyle _darkHeadline2 = _lightHeadline2.copyWith(
-    color: _darkPrimaryTextColor,
-  );
-
-  static final TextStyle _darkBodyText1 = _lightBodyText1.copyWith(
-    color: _darkPrimaryTextColor,
-  );
-
-  // Icon.
-  static final IconThemeData _iconThemeDark = _iconThemeLight.copyWith(
-    color: _primaryColorDark,
-  );
-
-  // Final Theme.
+  // Dark.
   static final ThemeData darkTheme = ThemeData.dark().copyWith(
     primaryColor: _primaryColorDark,
     scaffoldBackgroundColor: _darkBackgroundColor,
     buttonColor: _darkButtonColor,
-    iconTheme: _iconThemeDark,
+    iconTheme: IconThemeData(
+      color: _primaryColorDark,
+    ),
     textTheme: TextTheme(
-      headline1: _darkHeadline1,
-      headline2: _darkHeadline2,
-      bodyText1: _darkBodyText1,
+      headline1: _headlineText1.copyWith(
+        color: _darkPrimaryTextColor,
+      ),
+      headline2: _headlineText2.copyWith(
+        color: _darkPrimaryTextColor,
+      ),
+      bodyText1: _bodyText1.copyWith(
+        color: _darkPrimaryTextColor,
+      ),
     ),
   );
 }

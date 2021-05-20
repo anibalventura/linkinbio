@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:linkinbio/ui/themes.dart';
 import 'package:linkinbio/ui/widgets/adaptive_text.dart';
 import 'package:linkinbio/utils/texts.dart';
 import 'package:linkinbio/utils/utils.dart';
@@ -21,7 +22,7 @@ class Footer extends StatelessWidget {
             textAlign: TextAlign.center,
             style: TextStyle(
               color: theme(context).textTheme.headline1!.color,
-              fontSize: isLandscape() ? 18.sp : 12.sp,
+              fontSize: Themes().bodyTextSize2,
             ),
           ),
         ),

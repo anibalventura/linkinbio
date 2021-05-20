@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:linkinbio/ui/themes.dart';
 import 'package:linkinbio/ui/widgets/adaptive_text.dart';
 import 'package:linkinbio/utils/texts.dart';
 import 'package:linkinbio/utils/utils.dart';
@@ -35,14 +36,14 @@ class HomeScreen extends StatelessWidget {
                       AdaptiveText(
                         text: "Anibal Ventura",
                         style: theme(context).textTheme.headline1!.copyWith(
-                              fontSize: isLandscape() ? 36.sp : 24.sp,
+                              fontSize: Themes().headlineTextSize1,
                             ),
                       ),
                       SizedBox(height: 0.002.sh),
                       AdaptiveText(
                         text: translate(context, Texts.title),
                         style: theme(context).textTheme.headline2!.copyWith(
-                              fontSize: isLandscape() ? 26.sp : 18.sp,
+                              fontSize: Themes().headlineTextSize2,
                             ),
                       ),
                       SizedBox(

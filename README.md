@@ -17,6 +17,7 @@ See live preview [here](https://anibalventura.com/linkinbio/).
 - Title and subtitle.
 - Buttons that open links.
 - Support for night mode.
+- Languages: English and Spanish.
 
 ## Build
 
