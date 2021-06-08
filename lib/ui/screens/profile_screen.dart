@@ -34,7 +34,7 @@ class ProfileScreen extends StatelessWidget {
                       ),
                       SizedBox(height: 0.01.sh),
                       AdaptiveText(
-                        text: "Anibal Ventura",
+                        text: Texts.user,
                         style: theme(context).textTheme.headline1!.copyWith(
                               fontSize: Themes().headlineTextSize1,
                             ),
