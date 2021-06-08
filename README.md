@@ -34,11 +34,12 @@ For more information, see [Build and release a web app](https://flutter.dev/docs
 - [font_awesome_flutter](https://pub.dev/packages/font_awesome_flutter)
 - [google_fonts](https://pub.dev/packages/google_fonts)
 - [url_launcher](https://pub.dev/packages/url_launcher)
+- [url_strategy](https://pub.dev/packages/url_strategy)
 
 ### Dev Dependencies
 
-- [lint](https://pub.dev/packages/lint)
 - [flutter_native_splash](https://pub.dev/packages/flutter_native_splash)
+- [lint](https://pub.dev/packages/lint)
 
 # License
 
