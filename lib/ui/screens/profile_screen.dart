@@ -1,14 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:linkinbio/ui/themes.dart';
 import 'package:linkinbio/ui/widgets/adaptive_text.dart';
+import 'package:linkinbio/ui/widgets/link_list.dart';
 import 'package:linkinbio/utils/texts.dart';
 import 'package:linkinbio/utils/utils.dart';
-import 'package:linkinbio/ui/widgets/footer.dart';
-import 'package:linkinbio/ui/widgets/link_button.dart';
+import 'package:linkinbio/ui/widgets/page_footer.dart';
 
-class HomeScreen extends StatelessWidget {
+class ProfileScreen extends StatelessWidget {
   static const String route = '/';
 
   @override
@@ -55,34 +54,8 @@ class HomeScreen extends StatelessWidget {
                           thickness: 1,
                         ),
                       ),
-                      LinkButton(
-                        icon: FontAwesomeIcons.googlePlay,
-                        title: "Android Apps",
-                        url:
-                            'https://play.google.com/store/search?q=pub%3A%20Anibal%20Ventura&c=apps&hl=en',
-                      ),
-                      LinkButton(
-                        icon: FontAwesomeIcons.appStoreIos,
-                        title: "iOS Apps",
-                        url:
-                            'https://apps.apple.com/developer/anibal-ventura/id1550794427',
-                      ),
-                      LinkButton(
-                        icon: FontAwesomeIcons.github,
-                        title: "GitHub",
-                        url: 'https://github.com/anibalventura',
-                      ),
-                      LinkButton(
-                        icon: FontAwesomeIcons.linkedinIn,
-                        title: "LinkedIn",
-                        url: 'https://www.linkedin.com/in/anibalventura/',
-                      ),
-                      LinkButton(
-                        icon: FontAwesomeIcons.suitcase,
-                        title: translate(context, Texts.portfolio),
-                        url: 'https://anibalventura.com/',
-                      ),
-                      Footer(),
+                      LinksList(),
+                      PageFooter(),
                     ],
                   ),
                 ),

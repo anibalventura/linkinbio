@@ -5,7 +5,7 @@ import 'package:linkinbio/utils/texts.dart';
 import 'package:linkinbio/utils/utils.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class Footer extends StatelessWidget {
+class PageFooter extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Expanded(
