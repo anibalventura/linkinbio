@@ -9,7 +9,7 @@
 
 Simple web page for share clickable links to individual pages or products in your social media accounts.
 
-See live preview [here](linkinbio.anibalventura.com).
+See live preview [here](https://linkinbio.anibalventura.com/).
 
 ## Features
 
@@ -36,6 +36,7 @@ For more information, see [Build and release a web app](https://flutter.dev/docs
 - [url_launcher](https://pub.dev/packages/url_launcher)
 
 ### Dev Dependencies
+
 - [lint](https://pub.dev/packages/lint)
 - [flutter_native_splash](https://pub.dev/packages/flutter_native_splash)
 
@@ -64,4 +65,3 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 ```
-
