@@ -5,7 +5,7 @@
 [![Flutter Support](https://img.shields.io/static/v1?label=Support&message=Web%20&color=blue)]()
 [![License](https://img.shields.io/static/v1?label=License&message=MIT&color=blue)](LICENCE.md)
 
-<img src="app/repository-banner.png" align="center"/>
+<img src="assets/images/repository_banner.png" align="center"/>
 
 Simple web page for share clickable links to individual pages or products in your social media accounts.
 

@@ -28,7 +28,7 @@ flutter:
   assets:
     - assets/lang/
     - assets/images/launcher/
-    - assets/images/home_screen/
+    - assets/images/profile_screen/
 
 # To change splash run:
 # flutter clean && flutter pub get

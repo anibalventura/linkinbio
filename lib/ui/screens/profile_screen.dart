@@ -29,7 +29,7 @@ class ProfileScreen extends StatelessWidget {
                       CircleAvatar(
                         radius: isLandscape() ? 90.r : 50.r,
                         backgroundImage: const AssetImage(
-                          "assets/images/home_screen/profile.png",
+                          "assets/images/profile_screen/profile.png",
                         ),
                       ),
                       SizedBox(height: 0.01.sh),
