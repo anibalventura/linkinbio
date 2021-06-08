@@ -5,12 +5,17 @@ import 'package:linkinbio/ui/screens/profile_screen.dart';
 import 'package:linkinbio/services/localizations.dart';
 import 'package:linkinbio/ui/themes.dart';
 import 'package:linkinbio/utils/texts.dart';
+import 'package:url_strategy/url_strategy.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
 
-  // Init app with ScreenUtils for dynamic sizes.
+  // Set URL strategy for the web app.
+  // This delete the leading hast (#) on web page URL.
+  setPathUrlStrategy();
+
   runApp(
+    // Init app with ScreenUtils for dynamic sizes.
     ScreenUtilInit(builder: () => LinkinbioApp()),
   );
 }

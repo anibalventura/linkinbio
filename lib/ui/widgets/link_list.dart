@@ -7,6 +7,7 @@ import 'package:linkinbio/utils/utils.dart';
 import 'link_button.dart';
 
 class LinksList extends StatelessWidget {
+  // Return a list with the info of the profile links.
   List<Link> _getLinks(BuildContext context) {
     return [
       Link(
