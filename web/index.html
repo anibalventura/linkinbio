@@ -14,13 +14,18 @@
     * For example when hosting:
     * If using a subdomain like "username.github.io/linkinbio" change <base/> tag to:
     <base href="/linkinbio/" />
-    * Else leave as default.
+    * Else leave as default <base href="/" />
   -->
     <base href="/" />
 
     <meta charset="UTF-8" />
     <meta content="IE=Edge" http-equiv="X-UA-Compatible" />
-    <meta name="description" content="A new Flutter project." />
+
+    <!-- Shareable URL tags -->
+    <meta name="title" content="Linkinbio - Anibal Ventura" />
+    <meta name="image" content="assets/images/profile_screen/profile.png" />
+    <meta name="description" content="" />
+    <meta name="author" content="Anibal Ventura" />
 
     <!-- iOS meta tags & icons -->
     <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -31,10 +36,10 @@
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="favicon.png" />
 
-    <title>Linkinbio</title>
+    <title>Linkinbio - Anibal Ventura</title>
     <link rel="manifest" href="manifest.json" />
-  <link rel="stylesheet" type="text/css" href="splash/style.css">
-</head>
+    <link rel="stylesheet" type="text/css" href="splash/style.css" />
+  </head>
   <body>
     <!-- This script installs service_worker.js to provide PWA functionality to
        application. For more information, see:
@@ -46,11 +51,25 @@
         });
       }
     </script>
-  <picture id="splash">
-    <source srcset="splash/img/light-1x.png 1x, splash/img/light-2x.png 2x, splash/img/light-3x.png 3x" media="(prefers-color-scheme: light) or (prefers-color-scheme: no-preference)">
-    <source srcset="splash/img/dark-1x.png 1x, splash/img/dark-2x.png 2x, splash/img/dark-3x.png 3x" media="(prefers-color-scheme: dark)">
-    <img class="center" src="splash/img/light-1x.png" />
-  </picture>
+    <picture id="splash">
+      <source
+        srcset="
+          splash/img/light-1x.png 1x,
+          splash/img/light-2x.png 2x,
+          splash/img/light-3x.png 3x
+        "
+        media="(prefers-color-scheme: light) or (prefers-color-scheme: no-preference)"
+      />
+      <source
+        srcset="
+          splash/img/dark-1x.png 1x,
+          splash/img/dark-2x.png 2x,
+          splash/img/dark-3x.png 3x
+        "
+        media="(prefers-color-scheme: dark)"
+      />
+      <img class="center" src="splash/img/light-1x.png" />
+    </picture>
     <script src="main.dart.js" type="application/javascript"></script>
   </body>
 </html>
