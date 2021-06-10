@@ -16,11 +16,13 @@ void main() {
 
   runApp(
     // Init app with ScreenUtils for dynamic sizes.
-    ScreenUtilInit(builder: () => LinkinbioApp()),
+    ScreenUtilInit(builder: () => const LinkinbioApp()),
   );
 }
 
 class LinkinbioApp extends StatelessWidget {
+  const LinkinbioApp({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -28,7 +30,7 @@ class LinkinbioApp extends StatelessWidget {
       theme: Themes.lightTheme,
       darkTheme: Themes.darkTheme,
       routes: {
-        ProfileScreen.route: (context) => ProfileScreen(),
+        ProfileScreen.route: (context) => const ProfileScreen(),
       },
       localizationsDelegates: const [
         AppLocalizations.delegate,
@@ -42,7 +44,7 @@ class LinkinbioApp extends StatelessWidget {
       ],
       localeResolutionCallback:
           (Locale? locale, Iterable<Locale> supportedLocales) {
-        for (final Locale supportedLocale in supportedLocales) {
+        for (final supportedLocale in supportedLocales) {
           if (supportedLocale.languageCode == locale!.languageCode ||
               supportedLocale.countryCode == locale.countryCode) {
             return supportedLocale;

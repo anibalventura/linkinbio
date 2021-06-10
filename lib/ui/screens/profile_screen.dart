@@ -1,13 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:linkinbio/ui/themes.dart';
 import 'package:linkinbio/ui/widgets/adaptive_text.dart';
-import 'package:linkinbio/ui/widgets/link_list.dart';
+import 'package:linkinbio/ui/widgets/link_button.dart';
 import 'package:linkinbio/utils/texts.dart';
 import 'package:linkinbio/utils/utils.dart';
 import 'package:linkinbio/ui/widgets/page_footer.dart';
 
 class ProfileScreen extends StatelessWidget {
+  const ProfileScreen({Key? key}) : super(key: key);
+
   static const String route = '/';
 
   @override
@@ -29,7 +32,7 @@ class ProfileScreen extends StatelessWidget {
                       CircleAvatar(
                         radius: isLandscape() ? 90.r : 50.r,
                         backgroundImage: const AssetImage(
-                          "assets/images/profile_screen/profile.png",
+                          'assets/images/profile_screen/profile.png',
                         ),
                       ),
                       SizedBox(height: 0.01.sh),
@@ -54,8 +57,34 @@ class ProfileScreen extends StatelessWidget {
                           thickness: 1,
                         ),
                       ),
-                      LinksList(),
-                      PageFooter(),
+                      LinkButton(
+                        icon: FontAwesomeIcons.googlePlay,
+                        title: translate(context, Texts.androidApps),
+                        url:
+                            'https://play.google.com/store/search?q=pub%3A%20Anibal%20Ventura&c=apps&hl=en',
+                      ),
+                      LinkButton(
+                        icon: FontAwesomeIcons.appStoreIos,
+                        title: translate(context, Texts.iOSApps),
+                        url:
+                            'https://apps.apple.com/developer/anibal-ventura/id1550794427',
+                      ),
+                      LinkButton(
+                        icon: FontAwesomeIcons.github,
+                        title: translate(context, Texts.gitHub),
+                        url: 'https://github.com/anibalventura',
+                      ),
+                      LinkButton(
+                        icon: FontAwesomeIcons.linkedinIn,
+                        title: translate(context, Texts.linkedIn),
+                        url: 'https://www.linkedin.com/in/anibalventura/',
+                      ),
+                      LinkButton(
+                        icon: FontAwesomeIcons.suitcase,
+                        title: translate(context, Texts.portfolio),
+                        url: 'https://anibalventura.com/',
+                      ),
+                      const PageFooter(),
                     ],
                   ),
                 ),

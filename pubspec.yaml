@@ -22,7 +22,7 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_native_splash: ^1.1.7+1
-  lint: ^1.5.3
+  very_good_analysis: ^2.1.0
 
 flutter:
   uses-material-design: true

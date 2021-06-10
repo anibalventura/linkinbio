@@ -39,7 +39,7 @@ For more information, see [Build and release a web app](https://flutter.dev/docs
 ### Dev Dependencies
 
 - [flutter_native_splash](https://pub.dev/packages/flutter_native_splash)
-- [lint](https://pub.dev/packages/lint)
+- [very_good_analysis](https://pub.dev/packages/very_good_analysis)
 
 # License
 

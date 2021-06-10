@@ -6,12 +6,13 @@ import 'package:linkinbio/utils/utils.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class LinkButton extends StatelessWidget {
-  LinkButton({
+  const LinkButton({
     this.icon,
     this.title,
     this.url,
     this.backgroundColor,
-  });
+    Key? key,
+  }) : super(key: key);
 
   final IconData? icon;
   final String? title;
@@ -33,6 +34,7 @@ class LinkButton extends StatelessWidget {
           onTap: () async {
             await canLaunch(url!)
                 ? await launch(url!)
+                // ignore: only_throw_errors
                 : throw 'Could not launch $url!';
           },
           borderRadius: borderRadius,

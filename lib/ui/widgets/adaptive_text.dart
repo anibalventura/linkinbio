@@ -6,7 +6,8 @@ class AdaptiveText extends StatelessWidget {
     this.text,
     this.textAlign,
     this.style,
-  });
+    Key? key,
+  }) : super(key: key);
 
   final String? text;
   final TextAlign? textAlign;

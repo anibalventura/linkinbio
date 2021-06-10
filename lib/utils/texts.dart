@@ -1,4 +1,4 @@
-// Texts to translate with localizations.
+/// Texts to translate with localizations.
 
 /*
 * How to add texts to translate?
@@ -19,9 +19,11 @@ class Texts {
   static const String appName = 'Linkinbio';
   static const String user = 'Anibal Ventura';
 
-  /*
-  * Profile Screen.
-  */
+  /// Profile Screen.
   static const String title = 'title';
+  static const String androidApps = 'androidApps';
+  static const String iOSApps = 'iOSApps';
+  static const String gitHub = 'gitHub';
+  static const String linkedIn = 'linkedIn';
   static const String portfolio = 'portfolio';
 }

@@ -4,6 +4,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:linkinbio/utils/utils.dart';
 
+/// All the styles for the app.
 class Themes {
   /*
   * Sizes.
@@ -65,7 +66,7 @@ class Themes {
   * Themes.
   */
 
-  // Light.
+  /// Light.
   static final ThemeData lightTheme = ThemeData(
     primaryColor: _primaryColorLight,
     scaffoldBackgroundColor: _lightBackgroundColor,
@@ -81,7 +82,7 @@ class Themes {
     fontFamily: GoogleFonts.roboto().fontFamily,
   );
 
-  // Dark.
+  /// Dark.
   static final ThemeData darkTheme = ThemeData.dark().copyWith(
     primaryColor: _primaryColorDark,
     scaffoldBackgroundColor: _darkBackgroundColor,
