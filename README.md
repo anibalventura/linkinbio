@@ -4,6 +4,7 @@
 [![Null Safety](https://img.shields.io/static/v1?label=Null+Safety&message=YES&color=success)](https://flutter.dev/docs/null-safety)
 [![Flutter Support](https://img.shields.io/static/v1?label=Support&message=Web%20&color=blue)]()
 [![License](https://img.shields.io/static/v1?label=License&message=MIT&color=blue)](LICENCE.md)
+![example workflow](https://github.com/anibalventura/linkinbio/actions/workflows/gh-pages.yaml/badge.svg)
 
 <img src="assets/images/repository_banner.png" align="center"/>
 
