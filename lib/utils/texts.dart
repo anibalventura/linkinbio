@@ -1,4 +1,4 @@
-/// Texts to translate with localizations.
+// Texts to translate with localizations.
 
 /*
 * How to add texts to translate?

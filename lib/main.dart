@@ -42,8 +42,10 @@ class LinkinbioApp extends StatelessWidget {
         Locale('en', ''),
         Locale('es', ''),
       ],
-      localeResolutionCallback:
-          (Locale? locale, Iterable<Locale> supportedLocales) {
+      localeResolutionCallback: (
+        Locale? locale,
+        Iterable<Locale> supportedLocales,
+      ) {
         for (final supportedLocale in supportedLocales) {
           if (supportedLocale.languageCode == locale!.languageCode ||
               supportedLocale.countryCode == locale.countryCode) {

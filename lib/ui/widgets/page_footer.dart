@@ -17,21 +17,16 @@ class PageFooter extends StatelessWidget {
           padding: EdgeInsets.symmetric(
             vertical: isLandscape() ? 0.02.sh : 0.01.sh,
           ),
-          child: Column(
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              InkWell(
-                onTap: () => launchUrl('https://anibalventura.com/'),
-                child: Text(
-                  '© ${DateTime.now().year} Anibal Ventura',
-                  textAlign: TextAlign.center,
-                  style: TextStyle(
-                    color: theme(context).textTheme.headline1!.color,
-                    fontSize: Themes().bodyTextSize2,
-                  ),
-                ),
+          child: InkWell(
+            onTap: () => launchUrl('https://anibalventura.com/'),
+            child: Text(
+              '© ${DateTime.now().year} Anibal Ventura',
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                color: theme(context).textTheme.headline1!.color,
+                fontSize: Themes().bodyTextSize2,
               ),
-            ],
+            ),
           ),
         ),
       ),

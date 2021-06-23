@@ -31,9 +31,8 @@ class ProfileScreen extends StatelessWidget {
                       SizedBox(height: 0.1.sh),
                       CircleAvatar(
                         radius: isLandscape() ? 90.r : 50.r,
-                        backgroundImage: const AssetImage(
-                          'assets/images/profile_screen/profile.png',
-                        ),
+                        backgroundImage:
+                            const AssetImage('assets/images/profile_screen/profile.png'),
                       ),
                       SizedBox(height: 0.01.sh),
                       AdaptiveText(
@@ -66,8 +65,7 @@ class ProfileScreen extends StatelessWidget {
                       LinkButton(
                         icon: FontAwesomeIcons.appStoreIos,
                         title: translate(context, Texts.iOSApps),
-                        url:
-                            'https://apps.apple.com/developer/anibal-ventura/id1550794427',
+                        url: 'https://apps.apple.com/developer/anibal-ventura/id1550794427',
                       ),
                       LinkButton(
                         icon: FontAwesomeIcons.github,
@@ -84,7 +82,9 @@ class ProfileScreen extends StatelessWidget {
                         title: translate(context, Texts.portfolio),
                         url: 'https://anibalventura.com/',
                       ),
-                      const PageFooter(),
+                      SizedBox(height: 0.1.sh),
+                      // ignore: prefer_const_constructors
+                      PageFooter(),
                     ],
                   ),
                 ),
