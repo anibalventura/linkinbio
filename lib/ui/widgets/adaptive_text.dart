@@ -20,6 +20,12 @@ class AdaptiveText extends StatelessWidget {
             text!,
             textAlign: textAlign,
             style: style,
+            toolbarOptions: const ToolbarOptions(
+              copy: true,
+              selectAll: true,
+              cut: false,
+              paste: false,
+            ),
           )
         : Text(
             text!,

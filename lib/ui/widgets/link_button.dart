@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:linkinbio/ui/themes.dart';
-import 'package:linkinbio/ui/widgets/adaptive_text.dart';
 import 'package:linkinbio/utils/utils.dart';
-import 'package:url_launcher/url_launcher.dart';
 
 class LinkButton extends StatelessWidget {
   const LinkButton({
@@ -31,14 +29,9 @@ class LinkButton extends StatelessWidget {
         color: backgroundColor ?? theme(context).buttonColor,
         borderRadius: borderRadius,
         child: InkWell(
-          onTap: () async {
-            await canLaunch(url!)
-                ? await launch(url!)
-                // ignore: only_throw_errors
-                : throw 'Could not launch $url!';
-          },
+          onTap: () => launchUrl(url!),
           borderRadius: borderRadius,
-          child: Padding(
+          child: Container(
             padding: EdgeInsets.symmetric(
               horizontal: isLandscape() ? 0.03.sw : 0.05.sw,
               vertical: isLandscape() ? 0.02.sh : 0.015.sh,
@@ -55,8 +48,8 @@ class LinkButton extends StatelessWidget {
                   SizedBox(width: isLandscape() ? 0.01.sw : 0.03.sw),
                   FittedBox(
                     fit: BoxFit.fitWidth,
-                    child: AdaptiveText(
-                      text: title,
+                    child: Text(
+                      title!,
                       style: theme(context).textTheme.bodyText1!.copyWith(
                             fontSize: Themes().bodyTextSize1,
                           ),
