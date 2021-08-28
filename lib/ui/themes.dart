@@ -10,19 +10,19 @@ class Themes {
   * Sizes.
   */
 
-  final double _headlineTextSize1 = isLandscape() ? 36.sp : 24.sp;
+  final double _headlineTextSize1 = isLandscape() ? 28.sp : 22.sp;
   double get headlineTextSize1 => _headlineTextSize1;
 
-  final double _headlineTextSize2 = isLandscape() ? 26.sp : 18.sp;
+  final double _headlineTextSize2 = isLandscape() ? 18.sp : 16.sp;
   double get headlineTextSize2 => _headlineTextSize2;
 
   final double _bodyTextSize1 = isLandscape() ? 24.sp : 18.sp;
   double get bodyTextSize1 => _bodyTextSize1;
 
-  final double _bodyTextSize2 = isLandscape() ? 14.sp : 12.sp;
+  final double _bodyTextSize2 = isLandscape() ? 16.sp : 14.sp;
   double get bodyTextSize2 => _bodyTextSize2;
 
-  final double _iconSize = isLandscape() ? 0.03.sw : 0.05.sw;
+  final double _iconSize = isLandscape() ? 0.02.sw : 0.05.sw;
   double get iconSize => _iconSize;
 
   /*

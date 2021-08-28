@@ -1,10 +1,12 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:linkinbio/ui/themes.dart';
 import 'package:linkinbio/ui/widgets/adaptive_text.dart';
 import 'package:linkinbio/ui/widgets/link_button.dart';
-import 'package:linkinbio/utils/texts.dart';
+import 'package:linkinbio/ui/widgets/social_button.dart';
+import 'package:linkinbio/utils/localizations.dart';
 import 'package:linkinbio/utils/utils.dart';
 import 'package:linkinbio/ui/widgets/page_footer.dart';
 
@@ -30,56 +32,73 @@ class ProfileScreen extends StatelessWidget {
                     children: [
                       SizedBox(height: 0.1.sh),
                       CircleAvatar(
-                        radius: isLandscape() ? 90.r : 50.r,
-                        backgroundImage:
-                            const AssetImage('assets/images/profile_screen/profile.png'),
+                        backgroundColor: Colors.grey,
+                        radius: isLandscape() ? 71.r : 51.r,
+                        child: CircleAvatar(
+                          radius: isLandscape() ? 70.r : 50.r,
+                          backgroundImage: const AssetImage(
+                            'assets/images/profile_screen/profile.png',
+                          ),
+                        ),
                       ),
                       SizedBox(height: 0.01.sh),
                       AdaptiveText(
-                        text: Texts.user,
+                        text: LocaleTr.user,
                         style: theme(context).textTheme.headline1!.copyWith(
                               fontSize: Themes().headlineTextSize1,
                             ),
                       ),
                       SizedBox(height: 0.002.sh),
                       AdaptiveText(
-                        text: translate(context, Texts.title),
+                        text: tr(LocaleTr.title),
                         style: theme(context).textTheme.headline2!.copyWith(
                               fontSize: Themes().headlineTextSize2,
                             ),
                       ),
+                      SizedBox(height: 0.015.sh),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          const SocialButton(
+                            label: 'LinkedIn',
+                            icon: FontAwesomeIcons.linkedinIn,
+                            backgroundColor: Colors.blue,
+                            url: 'https://www.linkedin.com/in/anibalventura/',
+                          ),
+                          SizedBox(width: isLandscape() ? 0.01.sw : 0.03.sw),
+                          const SocialButton(
+                            icon: FontAwesomeIcons.github,
+                            label: 'GitHub',
+                            backgroundColor: Colors.black,
+                            url: 'https://github.com/anibalventura',
+                          ),
+                        ],
+                      ),
                       SizedBox(
-                        height: isLandscape() ? 0.08.sh : 0.05.sh,
-                        width: isLandscape() ? 0.1.sw : 0.15.sw,
+                        height: isLandscape() ? 0.06.sh : 0.05.sh,
+                        width: isLandscape() ? 0.05.sw : 0.15.sw,
                         child: Divider(
                           color: theme(context).textTheme.headline1!.color,
                           thickness: 1,
                         ),
                       ),
+                      // ignore: prefer_const_constructors
                       LinkButton(
                         icon: FontAwesomeIcons.googlePlay,
-                        title: translate(context, Texts.androidApps),
+                        title: 'Play Store',
                         url:
                             'https://play.google.com/store/search?q=pub%3A%20Anibal%20Ventura&c=apps&hl=en',
                       ),
+                      // ignore: prefer_const_constructors
                       LinkButton(
                         icon: FontAwesomeIcons.appStoreIos,
-                        title: translate(context, Texts.iOSApps),
-                        url: 'https://apps.apple.com/developer/anibal-ventura/id1550794427',
-                      ),
-                      LinkButton(
-                        icon: FontAwesomeIcons.github,
-                        title: translate(context, Texts.gitHub),
-                        url: 'https://github.com/anibalventura',
-                      ),
-                      LinkButton(
-                        icon: FontAwesomeIcons.linkedinIn,
-                        title: translate(context, Texts.linkedIn),
-                        url: 'https://www.linkedin.com/in/anibalventura/',
+                        title: 'App Store',
+                        url:
+                            'https://apps.apple.com/developer/anibal-ventura/id1550794427',
                       ),
                       LinkButton(
                         icon: FontAwesomeIcons.suitcase,
-                        title: translate(context, Texts.portfolio),
+                        title: tr(LocaleTr.portfolio),
                         url: 'https://anibalventura.com/',
                       ),
                       SizedBox(height: 0.1.sh),

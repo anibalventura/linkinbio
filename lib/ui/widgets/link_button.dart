@@ -28,18 +28,19 @@ class LinkButton extends StatelessWidget {
       child: Material(
         color: backgroundColor ?? theme(context).buttonColor,
         borderRadius: borderRadius,
+        elevation: 1,
         child: InkWell(
           onTap: () => launchUrl(url!),
           borderRadius: borderRadius,
           child: Container(
             padding: EdgeInsets.symmetric(
-              horizontal: isLandscape() ? 0.03.sw : 0.05.sw,
-              vertical: isLandscape() ? 0.02.sh : 0.015.sh,
+              horizontal: isLandscape() ? 0.015.sw : 0.05.sw,
+              vertical: isLandscape() ? 0.015.sh : 0.015.sh,
             ),
             child: ConstrainedBox(
               constraints: BoxConstraints(
-                minWidth: isLandscape() ? 0.25.sw : 0.4.sw,
-                maxWidth: isLandscape() ? 0.3.sw : 0.5.sw,
+                minWidth: isLandscape() ? 0.1.sw : 0.3.sw,
+                maxWidth: isLandscape() ? 0.2.sw : 0.4.sw,
               ),
               child: Row(
                 mainAxisSize: MainAxisSize.min,
@@ -51,7 +52,7 @@ class LinkButton extends StatelessWidget {
                     child: Text(
                       title!,
                       style: theme(context).textTheme.bodyText1!.copyWith(
-                            fontSize: Themes().bodyTextSize1,
+                            fontSize: Themes().bodyTextSize2,
                           ),
                     ),
                   ),

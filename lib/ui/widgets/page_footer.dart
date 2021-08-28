@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:linkinbio/ui/themes.dart';
 import 'package:linkinbio/utils/utils.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -24,7 +23,7 @@ class PageFooter extends StatelessWidget {
               textAlign: TextAlign.center,
               style: TextStyle(
                 color: theme(context).textTheme.headline1!.color,
-                fontSize: Themes().bodyTextSize2,
+                fontSize: isLandscape() ? 14.sp : 12.sp,
               ),
             ),
           ),
