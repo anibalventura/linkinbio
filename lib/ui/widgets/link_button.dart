@@ -26,7 +26,7 @@ class LinkButton extends StatelessWidget {
         vertical: isLandscape() ? 0.005.sh : 0.01.sw,
       ),
       child: Material(
-        color: backgroundColor ?? theme(context).buttonColor,
+        color: backgroundColor ?? theme(context).cardColor,
         borderRadius: borderRadius,
         elevation: 1,
         child: InkWell(

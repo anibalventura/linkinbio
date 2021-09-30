@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:linkinbio/utils/utils.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:linkinbio/utils/utils.dart';
 
 class PageFooter extends StatelessWidget {
   const PageFooter({Key? key}) : super(key: key);
@@ -12,7 +12,7 @@ class PageFooter extends StatelessWidget {
         alignment: Alignment.bottomCenter,
         child: Container(
           width: double.infinity,
-          color: theme(context).buttonColor,
+          color: theme(context).cardColor,
           padding: EdgeInsets.symmetric(
             vertical: isLandscape() ? 0.02.sh : 0.01.sh,
           ),

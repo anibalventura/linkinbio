@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:linkinbio/utils/utils.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:linkinbio/utils/utils.dart';
 
 class SocialButton extends StatelessWidget {
   const SocialButton({

@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:linkinbio/utils/utils.dart';
 
 /// All the styles for the app.
@@ -70,7 +70,7 @@ class Themes {
   static final ThemeData lightTheme = ThemeData(
     primaryColor: _primaryColorLight,
     scaffoldBackgroundColor: _lightBackgroundColor,
-    buttonColor: _lightButtonColor,
+    cardColor: _lightButtonColor,
     iconTheme: IconThemeData(
       color: _primaryColorLight,
     ),
@@ -86,7 +86,7 @@ class Themes {
   static final ThemeData darkTheme = ThemeData.dark().copyWith(
     primaryColor: _primaryColorDark,
     scaffoldBackgroundColor: _darkBackgroundColor,
-    buttonColor: _darkButtonColor,
+    cardColor: _darkButtonColor,
     iconTheme: IconThemeData(
       color: _primaryColorDark,
     ),

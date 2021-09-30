@@ -5,10 +5,10 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:linkinbio/ui/themes.dart';
 import 'package:linkinbio/ui/widgets/adaptive_text.dart';
 import 'package:linkinbio/ui/widgets/link_button.dart';
+import 'package:linkinbio/ui/widgets/page_footer.dart';
 import 'package:linkinbio/ui/widgets/social_button.dart';
 import 'package:linkinbio/utils/localizations.dart';
 import 'package:linkinbio/utils/utils.dart';
-import 'package:linkinbio/ui/widgets/page_footer.dart';
 
 class ProfileScreen extends StatelessWidget {
   const ProfileScreen({Key? key}) : super(key: key);
